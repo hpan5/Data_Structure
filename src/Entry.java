@@ -1,22 +1,34 @@
 public class Entry<K, V> {
     final K key;
     V value;
-    Entry<K, V> next;
+    Entry<K, V> next; //
+    final hashCode = 0.75;
+/*
+* @*/
+    Entry(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
 
     private boolean equals(Object o) {
-
+        if (o instanceof K) {
+            if (o.equals(this)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private K getKey() {
-
+        return key;
     }
 
     private V getValue() {
-
+        return value;
     }
 
     private int hashCode() {
-
+        return hashCode;
     }
     /*
     * Replaces the value corresponding to this entry with the specified value (optional operation).
