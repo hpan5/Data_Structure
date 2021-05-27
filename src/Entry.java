@@ -2,7 +2,7 @@ public class Entry<K, V> {
     final K key;
     V value;
     Entry<K, V> next; //
-    final hashCode = 0.75;
+    //private hashCode = 0.75;
 /*
 * @*/
     Entry(K key, V value) {
@@ -10,7 +10,7 @@ public class Entry<K, V> {
         this.value = value;
     }
 
-    private boolean equals(Object o) {
+    public boolean equals(Object o) {
         if (o instanceof K) {
             if (o.equals(this)) {
                 return true;
@@ -27,8 +27,12 @@ public class Entry<K, V> {
         return value;
     }
 
-    private int hashCode() {
-        return hashCode;
+    /*private int hashCode() {
+        if (key == null) {
+            return 0;
+        }
+        int hashNumber = key.hashCode();
+        return hashNumber;
     }
     /*
     * Replaces the value corresponding to this entry with the specified value (optional operation).
