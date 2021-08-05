@@ -1,3 +1,6 @@
+Writing my own Queue, Stack, Deque
+two ways: 1. use array 2. use Linked List
+
 Writing my own Entry class
 reference:
 https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
